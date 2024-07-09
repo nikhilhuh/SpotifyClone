@@ -5,10 +5,6 @@ function Header() {
   const [isToggle, setIsToggle] = useState(false);
   const dropdownRef = useRef(null);
 
-  const dropdownClicked = () => {
-    setIsToggle(prevState => !prevState); // Toggle the state
-  };
-
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsToggle(false); // Close dropdown if clicked outside
@@ -21,6 +17,10 @@ function Header() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  const handleToggle = () => {
+    setIsToggle(prevState => !prevState); // Toggle the state
+  };
 
   return (
     <>
@@ -48,7 +48,7 @@ function Header() {
 
             <abbr title='User'>
               <div className='relative cursor-pointer'>
-                <button onClick={dropdownClicked}>
+                <button onClick={handleToggle}>
                   <i className={`fa-solid fa-user hover:scale-125 ${isToggle ? 'text-blue-500' : 'text-white'}`}></i>
                 </button>
               </div>

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Sidebar() {
+    const [] = useState(false)
   return (
     <>
         <div className='bg-dark-gray rounded-xl overflow-hidden h-28'>
@@ -28,7 +29,9 @@ function Sidebar() {
                 </div>
             </div>
             <div className='flex justify-between ml-5 p-3'>
-                <span className='cursor-pointer'><i class="fa-solid fa-magnifying-glass"></i></span>
+                <span className='cursor-pointer'><i class="fa-solid fa-magnifying-glass"></i>
+
+                </span>
                 <span className='cursor-pointer'>Recents <i class="fa-solid fa-list-ul"></i></span>
             </div>
         </div>
