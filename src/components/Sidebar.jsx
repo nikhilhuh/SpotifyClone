@@ -1,7 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react';
+import SidebarLibrarySearch from './SidebarLibrarySearch.jsx'
 
 function Sidebar() {
-    const [] = useState(false)
+    const [ isLibrarySearchClicked , setIsLibrarySearchClicked ] = useState(false)
+    const libarySearchClickedRef = useRef(null);
+
+    const handleClickOutside = (event) => {
+        if (libarySearchClickedRef.current && !libarySearchClickedRef.current.contains(event.target)) {
+          setIsLibrarySearchClicked(false); // Close dropdown if clicked outside
+        }
+      };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, []);
+
   return (
     <>
         <div className='bg-dark-gray rounded-xl overflow-hidden h-28'>
@@ -28,11 +44,21 @@ function Sidebar() {
                     <span className='hover:cursor-pointer'><i class="fa-solid fa-arrow-right"></i></span>
                 </div>
             </div>
-            <div className='flex justify-between ml-5 p-3'>
-                <span className='cursor-pointer'><i class="fa-solid fa-magnifying-glass"></i>
+            <div className='flex justify-between p-3'>
+            <abbr title='Search in Library'>
+                <span 
+                className='cursor-pointer transition-transform ease-in' ref={libarySearchClickedRef}
+                onClick={() => setIsLibrarySearchClicked(true)}
+            >
+             {isLibrarySearchClicked ? (
+                 <SidebarLibrarySearch />
+             ) : (
+                  <i className="fa-solid fa-magnifying-glass hover:scale-125 ml-5 transition-transform duration-1000"></i>
+              )}
+             </span>
+            </abbr>
 
-                </span>
-                <span className='cursor-pointer'>Recents <i class="fa-solid fa-list-ul"></i></span>
+                <span className='cursor-pointer text-[16px]'>Recents <i class="fa-solid fa-list-ul"></i></span>
             </div>
         </div>
 
