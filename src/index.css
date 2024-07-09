@@ -27,7 +27,7 @@
     background-color: grey;
 }
 
-.albumhover:hover .fa-play{
+.albumhover:hover .card-play-button{
     opacity: 1;
 }
 

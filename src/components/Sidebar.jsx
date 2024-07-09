@@ -64,36 +64,28 @@ function Sidebar() {
 
         <div className='playlists bg-dark-gray rounded-bl-xl rounded-br-xl h-[450px] overflow-y-auto'>
             <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
+                <div><img src="/src/images/1.jpg" alt="" className='h-16'/></div>
+                <div className='hover:scale-110'>Playlist 1</div>
             </div>
             <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
+                <div><img src="/src/images/1.jpg" alt="" className='h-16'/></div>
+                <div className='hover:scale-110'>Playlist 1</div>
             </div>
             <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
+                <div><img src="/src/images/1.jpg" alt="" className='h-16'/></div>
+                <div className='hover:scale-110'>Playlist 1</div>
             </div>
             <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
+                <div><img src="/src/images/1.jpg" alt="" className='h-16'/></div>
+                <div className='hover:scale-110'>Playlist 1</div>
             </div>
             <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
+                <div><img src="/src/images/1.jpg" alt="" className='h-16'/></div>
+                <div className='hover:scale-110'>Playlist 1</div>
             </div>
             <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
-            </div>
-            <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
-            </div>
-            <div className='p-3 gap-3 flex items-center cursor-pointer'>
-                <div><img src="/src/images/1.jpg" alt="" className='h-16 rounded-lg'/></div>
-                <div>Playlist 1</div>
+                <div><img src="/src/images/1.jpg" alt="" className='h-16'/></div>
+                <div className='hover:scale-110'>Playlist 1</div>
             </div>
             
         </div>
