@@ -11,7 +11,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -23,7 +23,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -35,7 +35,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -47,7 +47,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -59,7 +59,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -71,7 +71,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -83,7 +83,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -95,7 +95,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -113,7 +113,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -125,7 +125,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -137,7 +137,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -149,7 +149,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -161,7 +161,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -173,7 +173,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -185,7 +185,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -197,7 +197,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -216,7 +216,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -228,7 +228,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -240,7 +240,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -252,7 +252,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -264,7 +264,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -276,7 +276,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -288,7 +288,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -300,7 +300,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -319,7 +319,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -331,7 +331,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -343,7 +343,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -355,7 +355,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -367,7 +367,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -379,7 +379,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -391,7 +391,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -403,7 +403,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -422,7 +422,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -434,7 +434,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -446,7 +446,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -458,7 +458,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -470,7 +470,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -482,7 +482,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -494,7 +494,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>
@@ -506,7 +506,7 @@ function SongsArea() {
         <div className='p-2 hover:bg-light-gray rounded-xl'>
           <div className='albumhover max-w-[150px] w-[150px] relative'>
             <img src="/src/images/2.jpg" alt="" className='h-[150px]'/>
-            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-20 right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
+            <div className='card-play-button opacity-0 bg-green-600 rounded-full absolute bottom-[100px] right-5 transition duration-300 cursor-pointer flex justify-center items-center h-[4rem] w-[4rem]'>
               <i className="fa-solid fa-play text-2xl text-black"></i>
             </div>
             <div className='px-2'>

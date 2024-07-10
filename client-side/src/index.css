@@ -20,10 +20,10 @@
 .playlists:hover::-webkit-scrollbar-thumb{
     background-color: grey;
 }
-.songs-area:hover::-webkit-scrollbar-track{
+.main-area:hover::-webkit-scrollbar-track{
     background-color: rgb(30, 29, 29);
 }
-.songs-area:hover::-webkit-scrollbar-thumb{
+.main-area:hover::-webkit-scrollbar-thumb{
     background-color: grey;
 }
 

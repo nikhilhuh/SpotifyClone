@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import SidebarLibrarySearch from './SidebarLibrarySearch.jsx'
+import { NavLink } from 'react-router-dom';
 
 function Sidebar() {
     const [ isLibrarySearchClicked , setIsLibrarySearchClicked ] = useState(false)
@@ -22,13 +23,17 @@ function Sidebar() {
     <>
         <div className='bg-dark-gray rounded-xl overflow-hidden h-28'>
             <ul className='list-none'>
-                <li className='mt-2 ml-5 p-3 justify-evenly cursor-pointer hover:text-white transition duration-300 ease-in hover:font-bold'>
-                    <span className='mr-4'><i class="fa-solid fa-house-user"></i></span>
-                    <span>Home</span>
+                <li className='mt-2 ml-5 p-3 justify-evenly cursor-pointer hover:text-white transition duration-300 ease-in hover:font-bold' >
+                    <NavLink to="/">
+                        <span className='mr-4'><i class="fa-solid fa-house-user"></i></span>
+                        <span>Home</span>
+                    </NavLink>
                 </li>
                 <li className='ml-5 mb-2 p-3 justify-evenly cursor-pointer hover:text-white transition duration-300 ease-in hover:font-bold'>
-                    <span className='mr-4'><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <span>Search</span>
+                    <NavLink to="/search">
+                        <span className='mr-4'><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <span>Search</span>
+                    </NavLink>
                 </li>
             </ul>
         </div>
