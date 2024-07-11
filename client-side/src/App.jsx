@@ -7,8 +7,12 @@ import PlayArea from './components/PlayArea';
 import Home from './pages/Home';
 import ExplorePremium from './pages/ExplorePremium';
 import InstallApp from './pages/InstallApp';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
+import { auth } from './firebase';
 
-function App() {
+
+function MainLayout() {
   const [isMusicOptions, setIsMusicOptions] = useState(true);
   const [isSearchOpened , setIsSearchOpened] = useState(false);
   const location = useLocation();
@@ -56,6 +60,18 @@ function App() {
         <PlayArea />
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path='/signup' element={<SignUp />}></Route>
+        <Route path='/signin' element={<SignIn />}></Route>
+        <Route path='/*' element={<MainLayout />}></Route>
+      </Routes>
+    </>
   );
 }
 
