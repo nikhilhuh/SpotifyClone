@@ -40,4 +40,4 @@ Technologies Used :- <br>
 3. CSS Framework (Tailwind CSS)
 4. Node.js
 5. NPM Packages
-6. Firebase Auth (later shifting on Auth.js)# SpotifyClone
+6. Firebase Auth (later shifting on Auth.js)
