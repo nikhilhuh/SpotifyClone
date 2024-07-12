@@ -3,7 +3,7 @@ import Dropdown from './Dropdown';
 import { NavLink } from 'react-router-dom';
 import Search from './Search';
 
-function Header({ isMusicOptions, isSearchOpened }) {
+function Header({ isMusicOptions, isSearchOpened, profilePhoto, username}) {
   const [isToggle, setIsToggle] = useState(false);
   const dropdownRef = useRef(null);
   const userRef = useRef(null);
@@ -58,9 +58,9 @@ function Header({ isMusicOptions, isSearchOpened }) {
               </div>
             </abbr>
 
-            <abbr title='User'>
+            <abbr title={username}>
               <div ref={userRef} className='relative cursor-pointer'>
-                <i className={`fa-solid fa-user hover:scale-125 ${isToggle ? 'text-blue-500' : 'text-white'}`}></i>
+                <img src={profilePhoto} alt="" className='h-[35px] rounded-full hover:scale-110 hover:border-white border-black border-2'/>
               </div>
             </abbr>
 

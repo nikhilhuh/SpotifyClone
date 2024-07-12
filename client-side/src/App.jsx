@@ -1,61 +1,110 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import PlayArea from './components/PlayArea';
-import Home from './pages/Home';
-import ExplorePremium from './pages/ExplorePremium';
-import InstallApp from './pages/InstallApp';
-import SignUp from './pages/SignUp';
-import SignIn from './pages/SignIn';
-import { auth } from './firebase';
-
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation, NavLink } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import PlayArea from "./components/PlayArea";
+import Home from "./pages/Home";
+import ExplorePremium from "./pages/ExplorePremium";
+import InstallApp from "./pages/InstallApp";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import { auth } from "./firebase";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import Loading from "./components/Loading";
 
 function MainLayout() {
   const [isMusicOptions, setIsMusicOptions] = useState(true);
-  const [isSearchOpened , setIsSearchOpened] = useState(false);
+  const [isSearchOpened, setIsSearchOpened] = useState(false);
   const location = useLocation();
+  const [username, setUsername] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [profilePhoto, setProfilePhoto] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isEmailVerified, setIsEmailVerified] = useState("");
 
   useEffect(() => {
-    if (location.pathname === '/' || location.pathname === '/home') {
+    if (location.pathname === "/" || location.pathname === "/home") {
       setIsMusicOptions(true);
     } else {
       setIsMusicOptions(false);
     }
-    if (location.pathname === '/search') {
+    if (location.pathname === "/search") {
       setIsSearchOpened(true);
     } else {
       setIsSearchOpened(false);
     }
   }, [location]);
 
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+        setUsername(user.displayName || "Anonymous");
+        setProfilePhoto(user.photoURL);
+        setEmail(user.email);
+        setIsEmailVerified(user.emailVerified ? "Verified" : "Not Verified");
+        setPhoneNumber(user.phoneNumber || "Not Set");
+      } else {
+        setIsLoggedIn(false);
+        setUsername("");
+        setProfilePhoto("");
+        setEmail("");
+        setIsEmailVerified("");
+        setPhoneNumber("");
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
-    <div className='h-screen bg-black overflow-hidden'>
-      <div className='flex flex-row'>
-        <div className='flex flex-col text-gray-300 font-medium text-xl w-[350px] mt-4 ml-4'>
+    <div className="h-screen bg-black overflow-hidden">
+      <div className="flex flex-row">
+        <div className="flex flex-col text-gray-300 font-medium text-xl w-[350px] mt-4 ml-4">
           <Sidebar />
         </div>
-        
-        <div className='flex flex-col p-3 text-gray-300 font-medium text-xl w-full ml-4 mt-4 mr-2 overflow-hidden h-[662px] rounded-xl bg-dark-gray'>
-          <div className='bg-opacity-5'>
-            <Header isMusicOptions={isMusicOptions}  isSearchOpened={isSearchOpened} />
+
+        <div className="flex flex-col p-3 text-gray-300 font-medium text-xl w-full ml-4 mt-4 mr-2 overflow-hidden h-[662px] rounded-xl bg-dark-gray">
+          <div className="bg-opacity-5">
+            <Header
+              isMusicOptions={isMusicOptions}
+              isSearchOpened={isSearchOpened}
+              profilePhoto={profilePhoto}
+              username={username}
+            />
           </div>
-          
-          <div className='main-area overflow-y-auto h-full p-2 mt-4 relative z-0'>
+
+          <div className="main-area overflow-y-auto h-full p-2 mt-4 relative z-0">
             <Routes>
               <Route index element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/search" element={<Home />} />
               <Route path="/premium" element={<ExplorePremium />} />
               <Route path="/installapp" element={<InstallApp />} />
+              <Route
+                path="/profile"
+                element={
+                  <Profile
+                    isLoggedIn={isLoggedIn}
+                    username={username}
+                    profilePhoto={profilePhoto}
+                    email={email}
+                    isEmailVerified={isEmailVerified}
+                    phoneNumber={phoneNumber}
+                  />
+                }
+              />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
-            <hr className='h-[0.4px] border-b border-black mt-8 mb-0' />
+            <hr className="h-[0.4px] border-b border-black mt-8 mb-0" />
             <Footer />
           </div>
         </div>
       </div>
-      
+
       <div>
         <PlayArea />
       </div>
@@ -63,15 +112,68 @@ function MainLayout() {
   );
 }
 
-function App() {
+function StartUp() {
   return (
-    <>
-      <Routes>
-        <Route path='/signup' element={<SignUp />}></Route>
-        <Route path='/signin' element={<SignIn />}></Route>
-        <Route path='/*' element={<MainLayout />}></Route>
-      </Routes>
-    </>
+    <div className="h-screen bg-dark-gray flex flex-col justify-center items-center gap-y-16">
+      <div className="flex flex-col justify-center text-center">
+        <svg viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg" className="h-[100px] mb-5">
+          <path
+            d="M84,0C37.53,0,0,37.53,0,84s37.53,84,84,84,84-37.53,84-84S130.47,0,84,0Zm38.21,120.75a6.23,6.23,0,0,1-8.56,2.05c-23.4-14.35-52.88-17.57-87.7-9.58a6.23,6.23,0,1,1-2.77-12.19c37.24-8.48,70.29-4.89,96.8,11.05A6.23,6.23,0,0,1,122.21,120.75Zm11.22-23.39a7.78,7.78,0,0,1-10.68,2.56c-26.79-16.45-67.67-21.26-99.45-11.58a7.78,7.78,0,1,1-4.8-14.79c35.48-11.52,79.77-6.16,110.24,12.58A7.78,7.78,0,0,1,133.43,97.36ZM144,65.59a9.31,9.31,0,0,1-12.81,3.06C101.83,53.55,66.29,50.57,39.68,59.67a9.31,9.31,0,1,1-5.76-17.71c30.84-10,71.83-6.63,103.51,12.33A9.31,9.31,0,0,1,144,65.59Z"
+            fill="#1ED760"
+          />
+        </svg>
+        <h2 className="text-3xl font-bold text-white mb-4">
+          SpotifyClone
+        </h2>
+        <h2 className="text-xl font-bold text-white">
+          Seamlessly listen to music you love.
+        </h2>
+      </div>
+      <div className="flex gap-10">
+        <NavLink to="/signin">
+          <button className="px-3 py-2 border-2 border-green-400 bg-green-400 rounded-full w-[100px] h-[50px] font-bold hover:scale-125">
+            Login
+          </button>
+        </NavLink>
+        <NavLink to="/signup">
+          <button className="px-3 py-2 border-2 border-green-400 bg-green-400 rounded-full w-[100px] h-[50px] font-bold hover:scale-125">
+            Sign Up
+          </button>
+        </NavLink>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoading , setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) 
+        setIsLoggedIn(true);
+      else
+        setIsLoggedIn(false)
+
+        setIsLoading(false)
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  return isLoading ? (
+    <Loading />
+  ) : (
+    <Routes>
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
+      {isLoggedIn ? (
+        <Route path="/*" element={<MainLayout />} />
+      ) : (
+        <Route path="/*" element={<StartUp />} />
+      )}
+    </Routes>
   );
 }
 
