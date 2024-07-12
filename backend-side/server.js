@@ -205,14 +205,14 @@ app.get("/api/songs", (req, res) => {
     res.json(songs);
 });
 
-// Get song by title
-app.get("/api/songs/:title", (req, res) => {
-    const song = songs.find(s => s.title === req.params.title);
-    if (!song) {
-        return res.status(404).send("Song Not Found");
-    }
-    res.json(song);
-});
+// // Get song by title
+// app.get("/api/songs/:title", (req, res) => {
+//     const song = songs.find(s => s.title === req.params.title);
+//     if (!song) {
+//         return res.status(404).send("Song Not Found");
+//     }
+//     res.json(song);
+// });
 
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);

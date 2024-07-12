@@ -1,10 +1,17 @@
 import React from 'react'
 import SongsArea from '../components/SongsArea'
+import { useRef } from 'react'
 
-function Home() {
+function Home( {currentSong , setCurrentSong , isSongPlaying , setIsSongPlaying , audioRef}) {
   return (
     <>
-        <SongsArea />
+        <SongsArea 
+        currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
+        isSongPlaying={isSongPlaying}
+        setIsSongPlaying={setIsSongPlaying}
+        audioRef={audioRef}
+        />
     
     </>
   )
