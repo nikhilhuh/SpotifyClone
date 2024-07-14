@@ -21,7 +21,7 @@ function Sidebar() {
 
   return (
     <>
-        <div className='bg-dark-gray rounded-xl overflow-hidden h-28'>
+        <div className='bg-dark-gray rounded-xl overflow-hidden lg:h-[155px]'>
             <ul className='list-none'>
                 <li className='mt-2 ml-5 p-3 justify-evenly cursor-pointer hover:text-white transition duration-300 ease-in hover:font-bold' >
                     <NavLink to="/">
@@ -38,7 +38,7 @@ function Sidebar() {
             </ul>
         </div>
 
-        <div className='bg-dark-gray rounded-tl-xl rounded-tr-xl mt-1 h-24 overflow-hidden'>
+        <div className='bg-dark-gray rounded-tl-xl rounded-tr-xl mt-1 lg:h-[138px] overflow-hidden'>
             <div className='flex justify-between ml-5 p-3'>
                 <div>
                     <span className='mr-4'><i class="fa-solid fa-book"></i></span>
@@ -67,7 +67,7 @@ function Sidebar() {
             </div>
         </div>
 
-        <div className='playlists bg-dark-gray rounded-bl-xl rounded-br-xl h-[450px] overflow-y-auto'>
+        <div className='playlists bg-dark-gray rounded-bl-xl rounded-br-xl h-full overflow-y-auto'>
             <div className='p-3 gap-3 flex items-center cursor-pointer'>
                 <div><img src="/src/images/1.jpg" alt="" className='h-16'/></div>
                 <div className='hover:scale-110'>Playlist 1</div>

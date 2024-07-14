@@ -2,9 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='ml-4 mr-4'>
+    <div className='ml-4 mr-4 text-gray-300'>
 
-      <div className='flex justify-between text-lg mt-10 mb-6'>
+      <div className='flex flex-wrap items-start lg:flex-row sm-custom:justify-evenly md:justify-evenly lg:justify-between text-sm md:text-lg mt-10 mb-6 gap-y-6 gap-x-6'>
         <ul className='list-none'>
           <li className='text-white font-bold text-xl'>Company</li>
           <li>About</li>
@@ -39,10 +39,10 @@ function Footer() {
         </div>
       </div>
 
-      <hr className='h-[0.4px] border-b border-white mt-8 mb-0' />
+      <hr className='h-[0.4px] border-b border-white mt-8 mb-6' />
 
-      <div className='flex justify-between ml-4 mr-4 mt-6 mb-10'>
-        <ul className='list-none flex gap-4 text-sm'>
+      <div className='flex flex-wrap justify-between mb-10 gap-y-4'>
+        <ul className='list-none flex flex-wrap gap-y-4 gap-x-4 text-sm'>
           <li>Legal</li>
           <li>Safety & Privacy Center</li>
           <li>Privacy Policy</li>

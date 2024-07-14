@@ -11,12 +11,12 @@ function Premium() {
 
 
   return (
-    <div className="text-white w-full">
+    <div className="text-white">
       <div className="bg-gradient-to-r from-purple-500 to-indigo-600 p-8 rounded-lg shadow-lg text-center">
-        <h1 className="text-4xl font-bold mb-4">
+        <h1 className="md:text-4xl text-2xl font-bold mb-4">
           Listen without limits. Try 2 months of Premium for ₹119.
         </h1>
-        <p className="text-xl mb-6">Only ₹119/month after. Cancel anytime.</p>
+        <p className="md:text-xl text-lg mb-6">Only ₹119/month after. Cancel anytime.</p>
         <div className="flex justify-center space-x-4">
           <a href="https://www.spotify.com/in-en/purchase/offer/default-2m-for-1-carrier-billing/?country=IN&ref=webplayer_app_native_pdp" target="_blank">
             <button className="text-black font-bold p-4 rounded-full border-2 border-white text-sm bg-white">
@@ -30,7 +30,7 @@ function Premium() {
         <p className="text-sm mt-4">
           ₹119 for 2 months, then ₹119 per month after. Offer only available if
           you haven't tried Premium before.{" "}
-          <a href="#" className="hover:underline">
+          <a href="#" className="underline">
             Terms apply
           </a>
         </p>
@@ -38,10 +38,10 @@ function Premium() {
 
       <div className="flex flex-col items-center justify-center text-center mt-12 gap-y-8">
         <div className="text-center max-w-[650px]">
-          <h2 className="text-3xl font-bold mb-2">
+          <h2 className="md:text-3xl text-xl font-bold mb-2">
             Affordable plans for any situation
           </h2>
-          <p className="text-[16px] text-gray-400 mb-4">
+          <p className="md:text-[16px] text-[12px] text-gray-400 mb-4">
             Choose a Premium plan and listen to ad-free music without limits on
             your phone, speaker, and other devices. Pay in various ways. Cancel
             anytime.
@@ -50,7 +50,7 @@ function Premium() {
         <div>
           <table className="border-collapse border-none text-left">
             <tr>
-              <td rowSpan={7} className="text-4xl font-bold p-4">
+              <td rowSpan={7} className="md:text-4xl text-2xl font-bold p-4">
                 All Premium Plans include
               </td>
               <td className="text-sm font-normal">
@@ -87,7 +87,7 @@ function Premium() {
         </div>
 
         <div className="flex flex-col gap-10 w-full mt-10" id="plansSection">
-          <div className="flex gap-10 justify-center items-center">
+          <div className="flex flex-wrap gap-10 justify-center items-center">
                 <div className="bg-light-gray h-[470px] w-[330px] rounded-xl">
               <div className="bg-green-300 h-[40px] w-[175px] rounded-br-xl rounded-tl-xl text-sm text-black py-2 font-bold">
                 ₹25 for 1 week
@@ -163,7 +163,7 @@ function Premium() {
                 </div>
           </div>
 
-          <div className="flex gap-10 justify-center items-center">
+          <div className="flex flex-wrap gap-10 justify-center items-center">
                 <div className="bg-light-gray h-[470px] w-[330px] rounded-xl">
               <div className="bg-blue-400 h-[40px] w-[175px] rounded-br-xl rounded-tl-xl text-sm text-black py-2 font-bold">
               ₹179 for 2 months
@@ -239,7 +239,7 @@ function Premium() {
                 </div>
           </div>
 
-            <div className="flex gap-10 justify-center items-center">
+            <div className="flex flex-wrap gap-10 justify-center items-center">
                 <div className="bg-light-gray h-[470px] w-[330px] rounded-xl">
                   <div className="bg-purple-400 h-[40px] w-[175px] rounded-br-xl rounded-tl-xl text-sm text-black py-2 font-bold">
                   ₹59 for 2 months
@@ -281,11 +281,11 @@ function Premium() {
 
         </div>
 
-        <div className="text-center max-w-[650px] mt-10">
-          <h2 className="text-3xl font-bold mb-2">
+        <div className="text-center md:max-w-[650px] mt-10">
+          <h2 className="md:text-3xl text-xl font-bold mb-2">
           Experience the difference
           </h2>
-          <p className="text-[16px] text-gray-400 mb-4">
+          <p className="md:text-[16px] text-[12px] text-gray-400 mb-4">
           Go Premium and enjoy full control of your listening. Cancel anytime.
           </p>
         </div>

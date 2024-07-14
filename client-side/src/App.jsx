@@ -1,5 +1,11 @@
-import React, { useState, useEffect , useRef } from "react";
-import { BrowserRouter, Routes, Route, useLocation, NavLink } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  NavLink,
+} from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -13,65 +19,35 @@ import { auth } from "./firebase";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Loading from "./components/Loading";
+import { useMediaQuery } from "react-responsive";
+import ResHeader from "./components/Responsive/ResHeader";
+import SongsArea from "./components/SongsArea";
+import ResPlayArea from "./components/Responsive/ResPlayArea";
+import Library from "./pages/Library";
+import Song from "./components/Responsive/Song";
 
-function MainLayout() {
-  const [isMusicOptions, setIsMusicOptions] = useState(true);
-  const [isSearchOpened, setIsSearchOpened] = useState(false);
-  const location = useLocation();
-  const [username, setUsername] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [profilePhoto, setProfilePhoto] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [isEmailVerified, setIsEmailVerified] = useState("");
-
-  const [currentSong, setCurrentSong] = useState(null);
-  const [isSongPlaying, setIsSongPlaying] = useState(false);
-  const audioRef = useRef();
-
-  useEffect(() => {
-    if (location.pathname === "/" || location.pathname === "/home") {
-      setIsMusicOptions(true);
-    } else {
-      setIsMusicOptions(false);
-    }
-    if (location.pathname === "/search") {
-      setIsSearchOpened(true);
-    } else {
-      setIsSearchOpened(false);
-    }
-  }, [location]);
-
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setIsLoggedIn(true);
-        setUsername(user.displayName || "Anonymous");
-        setProfilePhoto(user.photoURL);
-        setEmail(user.email);
-        setIsEmailVerified(user.emailVerified ? "Verified" : "Not Verified");
-        setPhoneNumber(user.phoneNumber || "Not Set");
-      } else {
-        setIsLoggedIn(false);
-        setUsername("");
-        setProfilePhoto("");
-        setEmail("");
-        setIsEmailVerified("");
-        setPhoneNumber("");
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
-
+function ForLargerScreens({
+  isMusicOptions,
+  isSearchOpened,
+  profilePhoto,
+  username,
+  currentSong,
+  setCurrentSong,
+  isSongPlaying,
+  setIsSongPlaying,
+  audioRef,
+  email,
+  isEmailVerified,
+  phoneNumber,
+}) {
   return (
-    <div className="h-screen bg-black overflow-hidden">
-      <div className="flex flex-row">
-        <div className="flex flex-col text-gray-300 font-medium text-xl w-[350px] mt-4 ml-4">
+    <div className="min-h-screen bg-black overflow-hidden">
+      <div className="flex flex-row h-[80vh]">
+        <div className="flex flex-col text-gray-300 font-medium text-xl w-[40%] mt-4 ml-4 h-full">
           <Sidebar />
         </div>
 
-        <div className="flex flex-col p-3 text-gray-300 font-medium text-xl w-full ml-4 mt-4 mr-2 overflow-hidden h-[662px] rounded-xl bg-dark-gray">
+        <div className="flex flex-col p-3 text-gray-300 font-medium text-xl w-full ml-4 mt-4 mr-2 overflow-hidden h-full rounded-xl bg-dark-gray">
           <div className="bg-opacity-5">
             <Header
               isMusicOptions={isMusicOptions}
@@ -125,7 +101,6 @@ function MainLayout() {
                 path="/profile"
                 element={
                   <Profile
-                    isLoggedIn={isLoggedIn}
                     username={username}
                     profilePhoto={profilePhoto}
                     email={email}
@@ -142,7 +117,7 @@ function MainLayout() {
         </div>
       </div>
 
-      <div>
+      <div className="h-[25vh]">
         {currentSong && (
           <PlayArea
             song={currentSong}
@@ -156,9 +131,189 @@ function MainLayout() {
   );
 }
 
+function ForSmallerScreens({
+  profilePhoto,
+  username,
+  currentSong,
+  setCurrentSong,
+  isSongPlaying,
+  setIsSongPlaying,
+  audioRef,
+  email,
+  isEmailVerified,
+  phoneNumber,
+}) {
+  const [isPlayAreaClicked, setIsPlayAreaClicked] = useState(false);
+
+  return (
+    <>
+      <div className="min-h-screen bg-black relative">
+        <div className="p-5">
+          {isPlayAreaClicked? null :(<ResHeader />)}
+          
+          <div className="flex-1">
+            <Routes>
+              <Route
+                index
+                element={
+                  <SongsArea
+                    setCurrentSong={setCurrentSong}
+                    setIsSongPlaying={setIsSongPlaying}
+                    audioRef={audioRef}
+                  />
+                }
+              />
+              <Route
+                path="/home"
+                element={
+                  <SongsArea
+                    setCurrentSong={setCurrentSong}
+                    setIsSongPlaying={setIsSongPlaying}
+                    audioRef={audioRef}
+                  />
+                }
+              />
+              <Route
+                path="/profile"
+                element={
+                  <Profile
+                    username={username}
+                    profilePhoto={profilePhoto}
+                    email={email}
+                    isEmailVerified={isEmailVerified}
+                    phoneNumber={phoneNumber}
+                  />
+                }
+              />
+              <Route path="/premium" element={<ExplorePremium />} />
+              <Route path="/installapp" element={<InstallApp />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route
+                path="/library"
+                element={
+                  <Library username={username} profilePhoto={profilePhoto} />
+                }
+              />
+              <Route path="/song" element={<Song song={currentSong} audioRef={audioRef} isSongPlaying={isSongPlaying} setIsPlayAreaClicked={setIsPlayAreaClicked}/>} />
+            </Routes>
+          </div>
+
+          {isPlayAreaClicked ? null : (
+            <>
+              <hr className="h-[0.4px] border-b border-dark-gray mt-8 mb-0" />
+              <Footer />
+            </>
+          )}
+        </div>
+
+        {isPlayAreaClicked ? null : (
+          <div className="fixed bottom-1 h-[60px] w-full z-50">
+            {currentSong && (
+              <ResPlayArea
+                setIsPlayAreaClicked={setIsPlayAreaClicked}
+                song={currentSong}
+                isSongPlaying={isSongPlaying}
+                setIsSongPlaying={setIsSongPlaying}
+                audioRef={audioRef}
+              />
+            )}
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
+function MainLayout() {
+  const [isMusicOptions, setIsMusicOptions] = useState(true);
+  const [isSearchOpened, setIsSearchOpened] = useState(false);
+  const location = useLocation();
+  const [username, setUsername] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [profilePhoto, setProfilePhoto] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isEmailVerified, setIsEmailVerified] = useState("");
+
+  const [currentSong, setCurrentSong] = useState(null);
+  const [isSongPlaying, setIsSongPlaying] = useState(false);
+  const audioRef = useRef();
+
+  const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
+
+  useEffect(() => {
+    if (location.pathname === "/" || location.pathname === "/home") {
+      setIsMusicOptions(true);
+    } else {
+      setIsMusicOptions(false);
+    }
+    if (location.pathname === "/search") {
+      setIsSearchOpened(true);
+    } else {
+      setIsSearchOpened(false);
+    }
+  }, [location]);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+        setUsername(user.displayName || "Anonymous");
+        setProfilePhoto(user.photoURL);
+        setEmail(user.email);
+        setIsEmailVerified(user.emailVerified ? "Verified" : "Not Verified");
+        setPhoneNumber(user.phoneNumber || "Not Set");
+      } else {
+        setIsLoggedIn(false);
+        setUsername("");
+        setProfilePhoto("");
+        setEmail("");
+        setIsEmailVerified("");
+        setPhoneNumber("");
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  return (
+    <>
+      {isLargeScreen ? (
+        <ForLargerScreens
+          isMusicOptions={isMusicOptions}
+          isSearchOpened={isSearchOpened}
+          profilePhoto={profilePhoto}
+          username={username}
+          currentSong={currentSong}
+          setCurrentSong={setCurrentSong}
+          isSongPlaying={isSongPlaying}
+          setIsSongPlaying={setIsSongPlaying}
+          audioRef={audioRef}
+          email={email}
+          isEmailVerified={isEmailVerified}
+          phoneNumber={phoneNumber}
+        />
+      ) : (
+        <ForSmallerScreens
+          profilePhoto={profilePhoto}
+          username={username}
+          currentSong={currentSong}
+          setCurrentSong={setCurrentSong}
+          isSongPlaying={isSongPlaying}
+          setIsSongPlaying={setIsSongPlaying}
+          audioRef={audioRef}
+          email={email}
+          isEmailVerified={isEmailVerified}
+          phoneNumber={phoneNumber}
+        />
+      )}
+    </>
+  );
+}
+
 function StartUp() {
   return (
-    <div className="h-screen bg-dark-gray flex flex-col justify-center items-center gap-y-16">
+    <div className="min-h-screen bg-dark-gray flex flex-col justify-center items-center gap-y-16">
       <div className="flex flex-col justify-center text-center">
         <svg
           viewBox="0 0 168 168"

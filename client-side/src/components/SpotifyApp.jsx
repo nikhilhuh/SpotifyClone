@@ -4,10 +4,10 @@ function SpotifyApp() {
   return (
     <div className='flex flex-col justify-center items-center w-full'>
         <div>
-            <img src="src/images/SpotifyApp.png" alt="" className='h-[450px]'/>
+            <img src="src/images/SpotifyApp.png" alt="" className='md:h-[450px] sm-custom:h-[250px] h-[200px]'/>
         </div>
-        <div className="text-center max-w-[450px] mt-8">
-          <h2 className="text-3xl font-bold mb-2">
+        <div className="text-center md:max-w-[450px] mt-8 text-white">
+          <h2 className="md:text-3xl text-lg font-bold mb-2">
           Seamlessly listen to music you love. Download the Spotify app for your computer.
           </h2>
         </div>

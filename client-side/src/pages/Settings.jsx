@@ -2,12 +2,12 @@ import React from "react";
 
 function Settings() {
   return (
-    <div>
-      <div className="mt-10 ml-5 flex justify-between w-[95%] items-center">
+    <div className="text-gray-300">
+      <div className="mt-10 md:ml-5 ml-2 flex justify-between w-[95%] items-center">
         <h1 className="text-5xl font-bold">Settings</h1>
         <i className="fa-solid fa-magnifying-glass text-lg translate-y-1"></i>
       </div>
-      <div className="mt-[100px] ml-8 max-w-[80%]">
+      <div className="mt-[50px] md:ml-8 ml-4 lg:max-w-[80%]">
         <div>
           We are currently working on giving our users more immersive experience
           , we will surely update the settings that you all can change
@@ -110,7 +110,7 @@ function Settings() {
                   </div>
                   <button
                     type="button"
-                    class="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    class="w-full rounded-md lg:bg-black bg-dark-gray px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
                   </button>

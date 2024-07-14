@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { auth } from "../firebase.js";
+import { auth } from '../firebase.js';
 import { toast } from 'react-toastify';
 
 function Dropdown() {

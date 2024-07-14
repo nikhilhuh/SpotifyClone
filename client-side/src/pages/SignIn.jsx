@@ -57,8 +57,8 @@ function SignIn(props) {
     navigate("/reset");
   };
   return (
-    <div className="h-screen w-full bg-dark-gray flex items-center justify-center">
-      <div className="text-white text-center">
+    <div className="min-h-screen w-full bg-dark-gray flex items-center justify-center">
+      <div className="text-white text-center w-[80%] md:w-[30%]">
         <div>
           <svg
             className="h-[40px] mx-auto mb-4"
@@ -76,7 +76,7 @@ function SignIn(props) {
           </svg>
         </div>
         <div className="font-bold text-5xl mb-6 w-full flex items-center justify-center">
-          <div className="max-w-[400px]">Login to Spotify</div>
+          <div className="max-w-[60%]">Login to Spotify</div>
         </div>
 
         <div class="mt-12 space-y-5">

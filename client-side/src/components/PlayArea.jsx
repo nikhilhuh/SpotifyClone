@@ -65,12 +65,12 @@ function PlayArea({ song, isSongPlaying, setIsSongPlaying, audioRef }) {
   };
 
   return (
-    <div className='flex items-center justify-between ml-10 mr-4 mt-6'>
-      <div className='flex items-center gap-2 max-w-[300px] w-[300px]'>
-        <img src={`http://localhost:3000${song.image}`} alt={song.title} className='h-[70px] w-[70px]' />
-        <div className='max-w-[175px] max-h-[70px]'>
+    <div className='flex items-center justify-between ml-10 mr-4 h-full text-xl'>
+      <div className='flex items-center gap-2 max-w-[250px] w-[250px]'>
+        <img src={`http://localhost:3000${song.image}`} alt="" className='h-[80px] w-[80px]' />
+        <div className='max-w-[170px] max-h-[100px]'>
           <h4 className='text-white'>{song.title}</h4>
-          <p className='text-sm text-gray-400'>{song.artist}</p>
+          <p className='text-sm  text-gray-400'>{song.artist}</p>
         </div>
       </div>
 
@@ -86,7 +86,7 @@ function PlayArea({ song, isSongPlaying, setIsSongPlaying, audioRef }) {
         </div>
         <div className='flex text-white gap-3 items-baseline'>
           <div id="start-time">{formatTime(currentTime)}</div>
-          <div className='w-[450px]'>
+          <div className='w-[40vw]'>
             <input
               type="range"
               name="song-progress-bar"

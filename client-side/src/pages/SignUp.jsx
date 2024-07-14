@@ -63,8 +63,8 @@ function SignUp() {
       });
   };
   return (
-    <div className="h-screen w-full bg-dark-gray flex items-center justify-center">
-      <div className="text-white text-center">
+    <div className="min-h-screen w-full bg-dark-gray flex items-center justify-center">
+      <div className="text-white text-center w-[80%] md:w-[30%]">
         <div>
           <svg
             className="h-[40px] mx-auto mb-4"
