@@ -67,7 +67,7 @@ function PlayArea({ song, isSongPlaying, setIsSongPlaying, audioRef }) {
   return (
     <div className='flex items-center justify-between ml-10 mr-4 h-full text-xl'>
       <div className='flex items-center gap-2 max-w-[250px] w-[250px]'>
-        <img src={`http://localhost:3000${song.image}`} alt="" className='h-[80px] w-[80px]' />
+        <img src={`http://localhost:3000${song.image}`} alt="" className='h-[70px] w-[70px]' />
         <div className='max-w-[170px] max-h-[100px]'>
           <h4 className='text-white'>{song.title}</h4>
           <p className='text-sm  text-gray-400'>{song.artist}</p>

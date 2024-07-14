@@ -26,6 +26,7 @@ import ResPlayArea from "./components/Responsive/ResPlayArea";
 import Library from "./pages/Library";
 import Song from "./components/Responsive/Song";
 
+
 function ForLargerScreens({
   isMusicOptions,
   isSearchOpened,
@@ -117,7 +118,7 @@ function ForLargerScreens({
         </div>
       </div>
 
-      <div className="h-[25vh]">
+      <div className="h-[18vh]">
         {currentSong && (
           <PlayArea
             song={currentSong}
@@ -224,7 +225,7 @@ function ForSmallerScreens({
   );
 }
 
-function MainLayout() {
+function MainLayout({currentSong,setCurrentSong,isSongPlaying,setIsSongPlaying,audioRef}) {
   const [isMusicOptions, setIsMusicOptions] = useState(true);
   const [isSearchOpened, setIsSearchOpened] = useState(false);
   const location = useLocation();
@@ -234,10 +235,6 @@ function MainLayout() {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isEmailVerified, setIsEmailVerified] = useState("");
-
-  const [currentSong, setCurrentSong] = useState(null);
-  const [isSongPlaying, setIsSongPlaying] = useState(false);
-  const audioRef = useRef();
 
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
 
@@ -349,6 +346,10 @@ function StartUp() {
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentSong, setCurrentSong] = useState(null);
+  const [isSongPlaying, setIsSongPlaying] = useState(false);
+  
+  const audioRef = useRef();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -368,7 +369,7 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
       {isLoggedIn ? (
-        <Route path="/*" element={<MainLayout />} />
+        <Route path="/*" element={<MainLayout currentSong={currentSong} setCurrentSong={setCurrentSong} isSongPlaying={isSongPlaying} setIsSongPlaying={setIsSongPlaying} audioRef={audioRef} />} />
       ) : (
         <Route path="/*" element={<StartUp />} />
       )}
