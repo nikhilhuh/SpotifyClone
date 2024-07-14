@@ -7,13 +7,6 @@ function ResPlayArea({setIsPlayAreaClicked , song , isSongPlaying, setIsSongPlay
     setIsPlayAreaClicked(true);
   };
 
-  const handleProgressChange = (e) => {
-    if (audioRef.current) {
-      const progress = e.target.value / 100;
-      audioRef.current.currentTime = progress * duration;
-    }
-  };
-
   const playSong = () => {
     if (audioRef.current) {
       audioRef.current.play().catch((error) => {

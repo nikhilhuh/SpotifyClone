@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -25,7 +25,7 @@ import SongsArea from "./components/SongsArea";
 import ResPlayArea from "./components/Responsive/ResPlayArea";
 import Library from "./pages/Library";
 import Song from "./components/Responsive/Song";
-
+import { PlayerContext } from "./context/PlayerContext";
 
 function ForLargerScreens({
   isMusicOptions,
@@ -60,42 +60,9 @@ function ForLargerScreens({
 
           <div className="main-area overflow-y-auto h-full p-2 mt-4 relative z-0">
             <Routes>
-              <Route
-                index
-                element={
-                  <Home
-                    currentSong={currentSong}
-                    setCurrentSong={setCurrentSong}
-                    isSongPlaying={isSongPlaying}
-                    setIsSongPlaying={setIsSongPlaying}
-                    audioRef={audioRef}
-                  />
-                }
-              />
-              <Route
-                path="/home"
-                element={
-                  <Home
-                    currentSong={currentSong}
-                    setCurrentSong={setCurrentSong}
-                    isSongPlaying={isSongPlaying}
-                    setIsSongPlaying={setIsSongPlaying}
-                    audioRef={audioRef}
-                  />
-                }
-              />
-              <Route
-                path="/search"
-                element={
-                  <Home
-                    currentSong={currentSong}
-                    setCurrentSong={setCurrentSong}
-                    isSongPlaying={isSongPlaying}
-                    setIsSongPlaying={setIsSongPlaying}
-                    audioRef={audioRef}
-                  />
-                }
-              />
+              <Route index element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/search" element={<Home />} />
               <Route path="/premium" element={<ExplorePremium />} />
               <Route path="/installapp" element={<InstallApp />} />
               <Route
@@ -150,8 +117,8 @@ function ForSmallerScreens({
     <>
       <div className="min-h-screen bg-black relative">
         <div className="p-5">
-          {isPlayAreaClicked? null :(<ResHeader />)}
-          
+          {isPlayAreaClicked ? null : <ResHeader />}
+
           <div className="flex-1">
             <Routes>
               <Route
@@ -195,7 +162,18 @@ function ForSmallerScreens({
                   <Library username={username} profilePhoto={profilePhoto} />
                 }
               />
-              <Route path="/song" element={<Song song={currentSong} audioRef={audioRef} isSongPlaying={isSongPlaying} setIsPlayAreaClicked={setIsPlayAreaClicked}/>} />
+              <Route
+                path="/song"
+                element={
+                  <Song
+                    song={currentSong}
+                    audioRef={audioRef}
+                    setIsSongPlaying={setIsSongPlaying}
+                    isSongPlaying={isSongPlaying}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
+                  />
+                }
+              />
             </Routes>
           </div>
 
@@ -225,7 +203,13 @@ function ForSmallerScreens({
   );
 }
 
-function MainLayout({currentSong,setCurrentSong,isSongPlaying,setIsSongPlaying,audioRef}) {
+function MainLayout({
+  currentSong,
+  setCurrentSong,
+  isSongPlaying,
+  setIsSongPlaying,
+  audioRef,
+}) {
   const [isMusicOptions, setIsMusicOptions] = useState(true);
   const [isSearchOpened, setIsSearchOpened] = useState(false);
   const location = useLocation();
@@ -304,6 +288,13 @@ function MainLayout({currentSong,setCurrentSong,isSongPlaying,setIsSongPlaying,a
           phoneNumber={phoneNumber}
         />
       )}
+      <audio ref={audioRef} controls style={{ display: "none" }}>
+        <source
+          src={currentSong ? `http://localhost:3000${currentSong.url}` : ""}
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
     </>
   );
 }
@@ -346,10 +337,10 @@ function StartUp() {
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
-  const [currentSong, setCurrentSong] = useState(null);
-  const [isSongPlaying, setIsSongPlaying] = useState(false);
-  
-  const audioRef = useRef();
+
+  const { currentSong, setCurrentSong } = useContext(PlayerContext);
+  const { isSongPlaying, setIsSongPlaying } = useContext(PlayerContext);
+  const { audioRef } = useContext(PlayerContext);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -369,7 +360,18 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
       {isLoggedIn ? (
-        <Route path="/*" element={<MainLayout currentSong={currentSong} setCurrentSong={setCurrentSong} isSongPlaying={isSongPlaying} setIsSongPlaying={setIsSongPlaying} audioRef={audioRef} />} />
+        <Route
+          path="/*"
+          element={
+            <MainLayout
+              currentSong={currentSong}
+              setCurrentSong={setCurrentSong}
+              isSongPlaying={isSongPlaying}
+              setIsSongPlaying={setIsSongPlaying}
+              audioRef={audioRef}
+            />
+          }
+        />
       ) : (
         <Route path="/*" element={<StartUp />} />
       )}

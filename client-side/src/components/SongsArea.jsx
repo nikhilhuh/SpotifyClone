@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { PlayerContext } from "../context/PlayerContext";
 
-function SongsArea({ setCurrentSong, setIsSongPlaying, audioRef }) {
+function SongsArea() {
   const [songsData, setSongsData] = useState({});
+
+  const {playSong} = useContext(PlayerContext)
 
   useEffect(() => {
     axios
@@ -14,17 +17,6 @@ function SongsArea({ setCurrentSong, setIsSongPlaying, audioRef }) {
         console.error("Error fetching songs:", error);
       });
   }, []);
-
-  const playSong = (song) => {
-    if (audioRef.current) {
-      audioRef.current.src = `http://localhost:3000${song.url}`;
-      audioRef.current.play().catch(error => {
-        console.error("Error playing song:", error);
-      });
-      setCurrentSong(song);
-      setIsSongPlaying(true);
-    }
-  };
 
   return (
     <div className="relative z-10">
@@ -57,10 +49,6 @@ function SongsArea({ setCurrentSong, setIsSongPlaying, audioRef }) {
           </div>
         </div>
       ))}
-      <audio ref={audioRef} controls style={{ display: "none" }}>
-        <source src="" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
     </div>
   );
 }
