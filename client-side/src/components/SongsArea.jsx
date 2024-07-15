@@ -23,7 +23,7 @@ function SongsArea({isPlayAreaClicked,setIsPlayAreaClicked}) {
     <div className="relative z-10">
       {Object.keys(songsData).map((category) => (
         <div key={category} className="main-song-area">
-          <h1 className="text-3xl font-bold category">{category}</h1>
+          <h1 className="text-xl md:text-3xl font-bold category">{category}</h1>
           <div className="flex-container">
             {songsData[category].map((song) => (
               <div

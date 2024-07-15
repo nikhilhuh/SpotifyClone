@@ -81,6 +81,15 @@ function  ForLargerScreens({
                 }
               />
               <Route
+                path="/song"
+                element={
+                  <Home
+                    isPlayAreaClicked={isPlayAreaClicked}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
+                  />
+                }
+              />
+              <Route
                 path="/search"
                 element={
                   <Home
