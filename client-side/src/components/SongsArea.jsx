@@ -9,7 +9,7 @@ function SongsArea() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/songs")
+      .get("https://spotifyclone-backend.onrender.com/api/songs")
       .then((response) => {
         setSongsData(response.data);
       })
@@ -32,7 +32,7 @@ function SongsArea() {
               >
                 <div className="albumhover">
                   <img
-                    src={`http://localhost:3000${song.image}`}
+                    src={`https://spotifyclone-backend.onrender.com${song.image}`}
                     alt={song.title}
                     className="album-image"
                   />

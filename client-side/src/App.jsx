@@ -290,7 +290,7 @@ function MainLayout({
       )}
       <audio ref={audioRef} controls style={{ display: "none" }}>
         <source
-          src={currentSong ? `http://localhost:3000${currentSong.url}` : ""}
+          src={currentSong ? `https://spotifyclone-backend.onrender.com${currentSong.url}` : ""}
           type="audio/mpeg"
         />
         Your browser does not support the audio element.

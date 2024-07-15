@@ -30,7 +30,7 @@ function ResPlayArea({setIsPlayAreaClicked , song , isSongPlaying, setIsSongPlay
           <NavLink to="/song" onClick={handlePlayAreaClick} className='w-[95%]'>
             <div className="flex gap-2 items-center">
               <img
-                src={`http://localhost:3000${song.image}`}
+                src={`https://spotifyclone-backend.onrender.com${song.image}`}
                 alt={song.title}
                 className="md:h-[40px] md:w-[40px] h-[30px] w-[30px]"
               />
