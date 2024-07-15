@@ -40,6 +40,8 @@ function ForLargerScreens({
   email,
   isEmailVerified,
   phoneNumber,
+  isPlayAreaClicked,
+  setIsPlayAreaClicked
 
 }) {
   return (
@@ -64,19 +66,22 @@ function ForLargerScreens({
               <Route
                 index
                 element={
-                  <Home />
+                  <Home isPlayAreaClicked={isPlayAreaClicked}
+                  setIsPlayAreaClicked={setIsPlayAreaClicked} />
                 }
               />
               <Route
                 path="/home"
                 element={
-                  <Home  />
+                  <Home isPlayAreaClicked={isPlayAreaClicked}
+                  setIsPlayAreaClicked={setIsPlayAreaClicked} />
                 }
               />
               <Route
                 path="/search"
                 element={
-                  <Home  />
+                  <Home  isPlayAreaClicked={isPlayAreaClicked}
+                  setIsPlayAreaClicked={setIsPlayAreaClicked}/>
                 }
               />
               <Route path="/premium" element={<ExplorePremium />} />
@@ -126,9 +131,10 @@ function ForSmallerScreens({
   email,
   isEmailVerified,
   phoneNumber,
+  isPlayAreaClicked,
+  setIsPlayAreaClicked
   
 }) {
-  const [isPlayAreaClicked, setIsPlayAreaClicked] = useState(false);
 
   return (
     <>
@@ -145,7 +151,8 @@ function ForSmallerScreens({
                     setCurrentSong={setCurrentSong}
                     setIsSongPlaying={setIsSongPlaying}
                     audioRef={audioRef}
-                    setIsPlayAreaClicked={setIsPlayAreaClicked}
+                    isPlayAreaClicked={isPlayAreaClicked}
+          setIsPlayAreaClicked={setIsPlayAreaClicked}
                   />
                 }
               />
@@ -156,7 +163,8 @@ function ForSmallerScreens({
                     setCurrentSong={setCurrentSong}
                     setIsSongPlaying={setIsSongPlaying}
                     audioRef={audioRef}
-                    setIsPlayAreaClicked={setIsPlayAreaClicked}
+                    isPlayAreaClicked={isPlayAreaClicked}
+          setIsPlayAreaClicked={setIsPlayAreaClicked}
                    
                   />
                 }
@@ -242,6 +250,8 @@ function MainLayout({
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isEmailVerified, setIsEmailVerified] = useState("");
 
+  const [isPlayAreaClicked, setIsPlayAreaClicked] = useState(false);
+
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
 
   useEffect(() => {
@@ -295,6 +305,8 @@ function MainLayout({
           email={email}
           isEmailVerified={isEmailVerified}
           phoneNumber={phoneNumber}
+          isPlayAreaClicked={isPlayAreaClicked}
+          setIsPlayAreaClicked={setIsPlayAreaClicked}
         />
       ) : (
         <ForSmallerScreens
@@ -308,6 +320,8 @@ function MainLayout({
           email={email}
           isEmailVerified={isEmailVerified}
           phoneNumber={phoneNumber}
+          isPlayAreaClicked={isPlayAreaClicked}
+          setIsPlayAreaClicked={setIsPlayAreaClicked}
         />
       )}
       <audio ref={audioRef} controls style={{ display: "none" }}>

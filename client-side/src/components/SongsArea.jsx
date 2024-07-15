@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { PlayerContext } from "../context/PlayerContext";
 
-function SongsArea({setIsPlayAreaClicked}) {
+function SongsArea({isPlayAreaClicked,setIsPlayAreaClicked}) {
   const [songsData, setSongsData] = useState({});
 
   const {playSong} = useContext(PlayerContext)

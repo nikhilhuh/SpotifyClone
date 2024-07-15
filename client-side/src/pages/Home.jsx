@@ -1,10 +1,11 @@
 import React from 'react'
 import SongsArea from '../components/SongsArea'
 
-function Home() {
+function Home({isPlayAreaClicked,setIsPlayAreaClicked}) {
   return (
     <>
-        <SongsArea />
+        <SongsArea isPlayAreaClicked={isPlayAreaClicked}
+          setIsPlayAreaClicked={setIsPlayAreaClicked} />
     
     </>
   )
