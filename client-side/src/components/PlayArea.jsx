@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { PlayerContext } from "../context/PlayerContext";
 
-function PlayArea({ setIsSongPlaying }) {
+function PlayArea() {
   const {
     setDuration,
     setCurrentTime,

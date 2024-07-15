@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { PlayerContext } from "../context/PlayerContext";
 
-function SongsArea({setIsLoading}) {
+function SongsArea() {
   const [songsData, setSongsData] = useState({});
 
   const {playSong} = useContext(PlayerContext)
@@ -12,11 +12,9 @@ function SongsArea({setIsLoading}) {
       .get("https://spotifyclone-backend-rh34.onrender.com/api/songs")
       .then((response) => {
         setSongsData(response.data);
-        setIsLoading(false)
       })
       .catch((error) => {
         console.error("Error fetching songs:", error);
-        setIsLoading(false)
       });
   }, []);
 

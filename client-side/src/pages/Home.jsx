@@ -1,10 +1,10 @@
 import React from 'react'
 import SongsArea from '../components/SongsArea'
 
-function Home({setIsLoading}) {
+function Home() {
   return (
     <>
-        <SongsArea setIsLoading={setIsLoading}/>
+        <SongsArea />
     
     </>
   )
