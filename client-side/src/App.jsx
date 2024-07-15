@@ -145,6 +145,7 @@ function ForSmallerScreens({
                     setCurrentSong={setCurrentSong}
                     setIsSongPlaying={setIsSongPlaying}
                     audioRef={audioRef}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
                   />
                 }
               />
@@ -155,6 +156,7 @@ function ForSmallerScreens({
                     setCurrentSong={setCurrentSong}
                     setIsSongPlaying={setIsSongPlaying}
                     audioRef={audioRef}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
                    
                   />
                 }
