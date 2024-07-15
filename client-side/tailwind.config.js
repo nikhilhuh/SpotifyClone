@@ -13,9 +13,6 @@ export default {
         'dark-gray': 'rgb(30, 29, 29)',
         'light-gray' : 'rgb(60, 58, 58)',
       },
-      height: {
-        'screen': 'calc(var(--vh) * 100)',
-      },
     },
   },
   plugins: [],

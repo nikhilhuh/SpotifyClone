@@ -279,6 +279,7 @@ function MainLayout({
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
+        // console.log(user);
         setIsLoggedIn(true);
         setUsername(user.displayName || "Anonymous");
         setProfilePhoto(user.photoURL);

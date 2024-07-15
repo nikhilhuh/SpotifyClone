@@ -27,13 +27,15 @@ function SignUp() {
     name: "",
     email: "",
     pass: "",
+    profilePhoto: "",
   });
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+  const [fileUploaded, setFileUploaded] = useState(false);
 
   const handleSubmission = () => {
-    if (!values.name || !values.email || !values.pass) {
-     console.log(errorMsg)
+    if (!values.name || !values.email || !values.pass || !values.profilePhoto) {
+      console.log(errorMsg);
       toast("Fill all fields");
       if (toast) {
         navigate("/SignUp");
@@ -114,20 +116,68 @@ function SignUp() {
               className="bg-transparent border-2 border-light-gray p-2 rounded-md mb-3"
               placeholder="name@example.com"
             />
-            <label 
-            for="password" 
-            className="font-bold mb-2">
+            <label for="password" className="font-bold mb-2">
               Password
             </label>
             <input
-                onChange={(event) =>
-                    setValues((prev) => ({ ...prev, pass: event.target.value }))
-                }
+              onChange={(event) =>
+                setValues((prev) => ({ ...prev, pass: event.target.value }))
+              }
               type="password"
               name="inputPass"
               id="inputPass"
               className="bg-transparent border-2 border-light-gray p-2 rounded-md"
               placeholder="************"
+            />
+            <label
+              for="profilePhoto"
+              className="mt-4 mb-2 flex items-center gap-3"
+            >
+              {fileUploaded ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  width="40"
+                  height="40"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4a4 4 0 100 8 4 4 0 000-8zM12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4zm6-2h3m-1.5-1.5v3"
+                  />
+                </svg>
+              )}
+
+              {fileUploaded ? "Choose Another Photo" : "Add your Profile Photo"}
+            </label>
+            <input
+              onChange={(event) => {
+                setValues((prev) => ({ ...prev, profilePhoto: event.target.files }));
+                setFileUploaded(event.target.files.length > 0);
+              }}
+              type="file"
+              name="profilePhoto"
+              id="profilePhoto"
+              className="hidden"
             />
           </div>
           <div>
@@ -137,7 +187,7 @@ function SignUp() {
               type="button"
               className="mt-6 bg-green-500 text-black font-bold text-[16px] p-2 rounded-full w-[90%]"
             >
-              Next
+              Create Account
             </button>
           </div>
         </form>
@@ -146,7 +196,7 @@ function SignUp() {
 
         <div class="mt-3 space-y-5">
           <button
-          onClick={handleGoogle}
+            onClick={handleGoogle}
             type="button"
             class="relative inline-flex w-full items-center justify-center border border-gray-400 bg-transparent px-3.5 py-2.5 font-semibold text-white rounded-full transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
           >

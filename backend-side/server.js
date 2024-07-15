@@ -38,7 +38,7 @@ const songs = {
       title: "Jawan Title Track",
       artist: "Raja Kumari, Anirudh Ravichander",
       url: "/songs/Jawan%20Title%20Track.mp3",
-      image: "/images/Arjan Vailly.jpg",
+      image: "/images/Jawan Title Track.jpg",
     },
     {
       title: "Sajni",
@@ -104,10 +104,10 @@ const songs = {
       image: "/images/Gandi Baat.jpg",
     },
     {
-      title: "Satranga",
-      artist: "Arijit Singh",
-      url: "/songs/Satranga.mp3",
-      image: "/images/Satranga.jpg",
+      title: "295",
+      artist: "Sidhu Moose Wala",
+      url: "/songs/295.mp3",
+      image: "/images/295.jpg",
     },
   ],
   "India's Best": [
@@ -144,10 +144,10 @@ const songs = {
       image: "/images/Gallan Goodiyaan.jpg",
     },
     {
-        title: "Mercy",
-        artist: "Badshah",
-        url: "/songs/Mercy.mp3",
-        image: "/images/Mercy.jpg",
+        title: "Laila Main Laila",
+        artist: "Pawni A Pandey",
+        url: "/songs/Laila%20Main%20Laila.mp3",
+        image: "/images/Laila Main Laila.jpg",
       },
   ],
   "Trending Now": [
@@ -182,19 +182,19 @@ const songs = {
       image: "/images/Chaleya.jpg",
     },
     {
-      title: "Hua Main",
-      artist: "Raghav Chaitanya, Pritam Chakraborty",
-      url: "/songs/Hua%20Main.mp3",
-      image: "/images/Hua Main.jpg",
+      title: "Fevicol Se",
+      artist: "Mamta Sharma, Wajid Aliy",
+      url: "/songs/Fevicol%20Se.mp3",
+      image: "/images/Fevicol Se.jpg",
     },
   ],
 
   "Trending In India": [
     {
-        title: "Jhoom RnB Mix",
-        artist: "Ali Zafar",
-        url: "/songs/Jhoom%20RnB%20Mix.mp3",
-        image: "/images/Jhoom RnB Mix.jpg",
+        title: "Sheila Ki Jawani",
+        artist: "Sunidhi Chauhan, Vishal Dadlani, Shekhar Ravjiani",
+        url: "/songs/Sheila%20Ki%20Jawani.mp3",
+        image: "/images/Sheila Ki Jawani.jpg",
       },
     {
       title: "Badmos Chora",

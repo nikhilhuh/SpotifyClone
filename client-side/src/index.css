@@ -58,6 +58,7 @@ input[type="range"]{
     border-radius: 0.75rem; /* equivalent to rounded-xl */
     transition: background-color 0.3s;
     position: relative;
+    min-height: 212px;
   }
   
   .card:hover {
@@ -131,6 +132,7 @@ input[type="range"]{
     border-radius: 0.75rem; /* equivalent to rounded-xl */
     transition: background-color 0.3s;
     position: relative;
+    min-height: 260px;
   }
   
   .card:hover {
