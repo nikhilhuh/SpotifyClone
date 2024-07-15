@@ -11,6 +11,7 @@ function PlayArea() {
     duration,
     volume,
     isSongPlaying,
+    setIsSongPlaying,
     audioRef,
   } = useContext(PlayerContext);
 

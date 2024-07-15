@@ -27,7 +27,7 @@ import Library from "./pages/Library";
 import Song from "./components/Responsive/Song";
 import { PlayerContext } from "./context/PlayerContext";
 
-function ForLargerScreens({
+function  ForLargerScreens({
   isMusicOptions,
   isSearchOpened,
   profilePhoto,
@@ -41,8 +41,7 @@ function ForLargerScreens({
   isEmailVerified,
   phoneNumber,
   isPlayAreaClicked,
-  setIsPlayAreaClicked
-
+  setIsPlayAreaClicked,
 }) {
   return (
     <div className="min-h-screen bg-black overflow-hidden">
@@ -66,22 +65,28 @@ function ForLargerScreens({
               <Route
                 index
                 element={
-                  <Home isPlayAreaClicked={isPlayAreaClicked}
-                  setIsPlayAreaClicked={setIsPlayAreaClicked} />
+                  <Home
+                    isPlayAreaClicked={isPlayAreaClicked}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
+                  />
                 }
               />
               <Route
                 path="/home"
                 element={
-                  <Home isPlayAreaClicked={isPlayAreaClicked}
-                  setIsPlayAreaClicked={setIsPlayAreaClicked} />
+                  <Home
+                    isPlayAreaClicked={isPlayAreaClicked}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
+                  />
                 }
               />
               <Route
                 path="/search"
                 element={
-                  <Home  isPlayAreaClicked={isPlayAreaClicked}
-                  setIsPlayAreaClicked={setIsPlayAreaClicked}/>
+                  <Home
+                    isPlayAreaClicked={isPlayAreaClicked}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
+                  />
                 }
               />
               <Route path="/premium" element={<ExplorePremium />} />
@@ -132,10 +137,8 @@ function ForSmallerScreens({
   isEmailVerified,
   phoneNumber,
   isPlayAreaClicked,
-  setIsPlayAreaClicked
-  
+  setIsPlayAreaClicked,
 }) {
-
   return (
     <>
       <div className="min-h-screen bg-black relative">
@@ -152,7 +155,7 @@ function ForSmallerScreens({
                     setIsSongPlaying={setIsSongPlaying}
                     audioRef={audioRef}
                     isPlayAreaClicked={isPlayAreaClicked}
-          setIsPlayAreaClicked={setIsPlayAreaClicked}
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
                   />
                 }
               />
@@ -164,8 +167,7 @@ function ForSmallerScreens({
                     setIsSongPlaying={setIsSongPlaying}
                     audioRef={audioRef}
                     isPlayAreaClicked={isPlayAreaClicked}
-          setIsPlayAreaClicked={setIsPlayAreaClicked}
-                   
+                    setIsPlayAreaClicked={setIsPlayAreaClicked}
                   />
                 }
               />
@@ -199,7 +201,6 @@ function ForSmallerScreens({
                     setIsSongPlaying={setIsSongPlaying}
                     isSongPlaying={isSongPlaying}
                     setIsPlayAreaClicked={setIsPlayAreaClicked}
-                  
                   />
                 }
               />
@@ -238,7 +239,6 @@ function MainLayout({
   isSongPlaying,
   setIsSongPlaying,
   audioRef,
-
 }) {
   const [isMusicOptions, setIsMusicOptions] = useState(true);
   const [isSearchOpened, setIsSearchOpened] = useState(false);
@@ -387,7 +387,7 @@ function App() {
       if (user) setIsLoggedIn(true);
       else setIsLoggedIn(false);
     });
-    setIsLoading(false)
+    setIsLoading(false);
 
     return () => unsubscribe();
   }, []);
