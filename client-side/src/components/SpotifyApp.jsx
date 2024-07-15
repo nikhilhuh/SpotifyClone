@@ -1,10 +1,11 @@
 import React from 'react'
+import SpotifyAppImage from '../images/SpotifyApp.png'
 
 function SpotifyApp() {
   return (
     <div className='flex flex-col justify-center items-center w-full'>
         <div>
-            <img src="src/images/SpotifyApp.png" alt="" className='md:h-[450px] sm-custom:h-[250px] h-[200px]'/>
+            <img src={SpotifyAppImage} alt="" className='md:h-[450px] sm-custom:h-[250px] h-[200px]'/>
         </div>
         <div className="text-center md:max-w-[450px] mt-8 text-white">
           <h2 className="md:text-3xl text-lg font-bold mb-2">

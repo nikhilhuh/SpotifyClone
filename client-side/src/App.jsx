@@ -40,6 +40,7 @@ function ForLargerScreens({
   email,
   isEmailVerified,
   phoneNumber,
+  setIsLoading
 }) {
   return (
     <div className="min-h-screen bg-black overflow-hidden">
@@ -60,9 +61,9 @@ function ForLargerScreens({
 
           <div className="main-area overflow-y-auto h-full p-2 mt-4 relative z-0">
             <Routes>
-              <Route index element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/search" element={<Home />} />
+              <Route index element={<Home setIsLoading={setIsLoading}/>} />
+              <Route path="/home" element={<Home setIsLoading={setIsLoading}/>} />
+              <Route path="/search" element={<Home setIsLoading={setIsLoading}/>} />
               <Route path="/premium" element={<ExplorePremium />} />
               <Route path="/installapp" element={<InstallApp />} />
               <Route
@@ -110,6 +111,7 @@ function ForSmallerScreens({
   email,
   isEmailVerified,
   phoneNumber,
+  setIsLoading
 }) {
   const [isPlayAreaClicked, setIsPlayAreaClicked] = useState(false);
 
@@ -209,6 +211,7 @@ function MainLayout({
   isSongPlaying,
   setIsSongPlaying,
   audioRef,
+  setIsLoading
 }) {
   const [isMusicOptions, setIsMusicOptions] = useState(true);
   const [isSearchOpened, setIsSearchOpened] = useState(false);
@@ -273,6 +276,7 @@ function MainLayout({
           email={email}
           isEmailVerified={isEmailVerified}
           phoneNumber={phoneNumber}
+          setIsLoading={setIsLoading}
         />
       ) : (
         <ForSmallerScreens
@@ -286,11 +290,12 @@ function MainLayout({
           email={email}
           isEmailVerified={isEmailVerified}
           phoneNumber={phoneNumber}
+          setIsLoading={setIsLoading}
         />
       )}
       <audio ref={audioRef} controls style={{ display: "none" }}>
         <source
-          src={currentSong ? `https://spotifyclone-backend.onrender.com${currentSong.url}` : ""}
+          src={currentSong ? `https://spotifyclone-backend-rh34.onrender.com${currentSong.url}` : ""}
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -346,8 +351,6 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) setIsLoggedIn(true);
       else setIsLoggedIn(false);
-
-      setIsLoading(false);
     });
 
     return () => unsubscribe();
@@ -369,6 +372,7 @@ function App() {
               isSongPlaying={isSongPlaying}
               setIsSongPlaying={setIsSongPlaying}
               audioRef={audioRef}
+              setIsLoading={setIsLoading}
             />
           }
         />

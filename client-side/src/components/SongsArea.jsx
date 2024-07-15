@@ -2,19 +2,21 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { PlayerContext } from "../context/PlayerContext";
 
-function SongsArea() {
+function SongsArea({setIsLoading}) {
   const [songsData, setSongsData] = useState({});
 
   const {playSong} = useContext(PlayerContext)
 
   useEffect(() => {
     axios
-      .get("https://spotifyclone-backend.onrender.com/api/songs")
+      .get("https://spotifyclone-backend-rh34.onrender.com/api/songs")
       .then((response) => {
         setSongsData(response.data);
+        setIsLoading(false)
       })
       .catch((error) => {
         console.error("Error fetching songs:", error);
+        setIsLoading(false)
       });
   }, []);
 
@@ -32,7 +34,7 @@ function SongsArea() {
               >
                 <div className="albumhover">
                   <img
-                    src={`https://spotifyclone-backend.onrender.com${song.image}`}
+                    src={`https://spotifyclone-backend-rh34.onrender.com${song.image}`}
                     alt={song.title}
                     className="album-image"
                   />

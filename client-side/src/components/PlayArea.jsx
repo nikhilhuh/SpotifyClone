@@ -82,7 +82,7 @@ function PlayArea({ setIsSongPlaying }) {
     <div className="flex items-center justify-between ml-10 mr-4 h-full text-xl">
       <div className="flex items-center gap-2 max-w-[250px] w-[250px]">
         <img
-          src={`https://spotifyclone-backend.onrender.com${currentSong.image}`}
+          src={`https://spotifyclone-backend-rh34.onrender.com${currentSong.image}`}
           alt=""
           className="h-[70px] w-[70px]"
         />
