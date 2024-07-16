@@ -26,6 +26,7 @@ import ResPlayArea from "./components/Responsive/ResPlayArea";
 import Library from "./pages/Library";
 import Song from "./components/Responsive/Song";
 import { PlayerContext } from "./context/PlayerContext";
+import UserImage from "./images/user.png"
 
 function  ForLargerScreens({
   isMusicOptions,
@@ -254,7 +255,7 @@ function MainLayout({
   const location = useLocation();
   const [username, setUsername] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [profilePhoto, setProfilePhoto] = useState("");
+  const [profilePhoto, setProfilePhoto] = useState(null);
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isEmailVerified, setIsEmailVerified] = useState("");
@@ -280,11 +281,9 @@ function MainLayout({
 
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        console.log(user);
         setIsLoggedIn(true);
         setUsername(user.displayName || "Anonymous");
-        setProfilePhoto(user.photoURL);
-        console.log(profilePhoto);
+        setProfilePhoto(user.photoURL ?? UserImage);
         setEmail(user.email);
         setIsEmailVerified(user.emailVerified ? "Verified" : "Not Verified");
         setPhoneNumber(user.phoneNumber || "Not Set");

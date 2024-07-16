@@ -6,7 +6,8 @@ function Profile({
   email,
   isEmailVerified,
   phoneNumber,
-}) {
+}) 
+{
   return (
     <div className="text-gray-50">
       <div className="text-white flex justify-start items-center bg-gradient-to-b from-amber-100 to-dark-gray">
