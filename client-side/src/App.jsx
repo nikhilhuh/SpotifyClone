@@ -277,19 +277,21 @@ function MainLayout({
   }, [location]);
 
   useEffect(() => {
+
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        // console.log(user);
+        console.log(user);
         setIsLoggedIn(true);
         setUsername(user.displayName || "Anonymous");
         setProfilePhoto(user.photoURL);
+        console.log(profilePhoto);
         setEmail(user.email);
         setIsEmailVerified(user.emailVerified ? "Verified" : "Not Verified");
         setPhoneNumber(user.phoneNumber || "Not Set");
       } else {
         setIsLoggedIn(false);
         setUsername("");
-        setProfilePhoto("");
+        setProfilePhoto(null);
         setEmail("");
         setIsEmailVerified("");
         setPhoneNumber("");
@@ -338,7 +340,7 @@ function MainLayout({
         <source
           src={
             currentSong
-              ? `https://spotifyclone-backend-rh34.onrender.com${currentSong.url}`
+              ? `http://localhost:3000${currentSong.url}`
               : ""
           }
           type="audio/mpeg"

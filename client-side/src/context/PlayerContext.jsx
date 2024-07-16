@@ -13,7 +13,7 @@ const PlayerContextProvider = (props) => {
 
   const playSong = (song) => {
     if (audioRef.current) {
-      audioRef.current.src = `https://spotifyclone-backend-rh34.onrender.com${song.url}`;
+      audioRef.current.src = `http://localhost:3000${song.url}`;
       audioRef.current.play().catch((error) => {
         console.error("Error playing audio:", error);
       });

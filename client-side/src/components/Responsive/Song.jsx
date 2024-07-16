@@ -83,7 +83,7 @@ function Song({ song, audioRef, setIsSong, setIsSongPlaying, isSongPlaying, setI
       </div>
       <div className="w-full flex flex-col items-center justify-center mt-5">
         <img
-          src={`https://spotifyclone-backend-rh34.onrender.com${song.image}`}
+          src={`http://localhost:3000${song.image}`}
           alt={song.title}
           className="md:h-[400px] md:w-[400px] h-[300px] w-[300px]"
         />

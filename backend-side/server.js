@@ -143,12 +143,6 @@ const songs = {
       url: "/songs/Gallan%20Goodiyaan.mp3",
       image: "/images/Gallan Goodiyaan.jpg",
     },
-    {
-        title: "Laila Main Laila",
-        artist: "Pawni A Pandey",
-        url: "/songs/Laila%20Main%20Laila.mp3",
-        image: "/images/Laila Main Laila.jpg",
-      },
   ],
   "Trending Now": [
     {
