@@ -1,6 +1,7 @@
 import { createContext, useRef, useState, useEffect } from "react";
 
 export const PlayerContext = createContext();
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const PlayerContextProvider = (props) => {
   const audioRef = useRef(null);
@@ -13,7 +14,7 @@ const PlayerContextProvider = (props) => {
 
   const playSong = (song) => {
     if (audioRef.current) {
-      audioRef.current.src = `http://localhost:3000${song.url}`;
+      audioRef.current.src = `${BACKEND_URL}${song.url}`;
       audioRef.current.play().catch((error) => {
         console.error("Error playing audio:", error);
       });

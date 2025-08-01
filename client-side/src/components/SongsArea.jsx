@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { PlayerContext } from "../context/PlayerContext";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 function SongsArea({isPlayAreaClicked,setIsPlayAreaClicked}) {
   const [songsData, setSongsData] = useState({});
@@ -10,7 +11,7 @@ function SongsArea({isPlayAreaClicked,setIsPlayAreaClicked}) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/songs")
+      .get(`${BACKEND_URL}/api/songs`)
       .then((response) => {
         setSongsData(response.data);
       })
@@ -33,7 +34,7 @@ function SongsArea({isPlayAreaClicked,setIsPlayAreaClicked}) {
               >
                 <div className="albumhover">
                   <img
-                    src={`http://localhost:3000${song.image}`}
+                    src={`${BACKEND_URL}${song.image}`}
                     alt={song.title}
                     className="album-image"
                   />

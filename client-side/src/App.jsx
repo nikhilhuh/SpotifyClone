@@ -27,6 +27,7 @@ import Library from "./pages/Library";
 import Song from "./components/Responsive/Song";
 import { PlayerContext } from "./context/PlayerContext";
 import UserImage from "./images/user.png"
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 function  ForLargerScreens({
   isMusicOptions,
@@ -339,7 +340,7 @@ function MainLayout({
         <source
           src={
             currentSong
-              ? `http://localhost:3000${currentSong.url}`
+              ? `$${BACKEND_URL}${currentSong.url}`
               : ""
           }
           type="audio/mpeg"
