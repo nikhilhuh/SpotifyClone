@@ -1,43 +1,109 @@
-# Project Name : SpotifyClone
+# 🎧 Spotify Clone – Full-Stack Developer Project
 
-Team Members :- <br><br>
-<table>
-  <tr>
-    <td>
-      <strong>Name:</strong> Nikhil Tiwari<br>
-      <strong>Semester:</strong> 3rd<br>
-    </td>
-    <td>
-      <strong>Name:</strong> Himanshu Verma<br>
-      <strong>Semester:</strong> 3rd<br>
-    </td>
-  </tr>
-</table>
+A visually and functionally inspired Spotify clone built with **React.js + Tailwind CSS** on the frontend and **Node.js + Express.js** for backend logic, using **Firebase Authentication** for secure user login.
 
-Introduction :-<br>
-This project, SpotifyClone, allows users to stream and enjoy music seamlessly. It includes features such as user authentication, song storage, and streaming capabilities. Additionally, users can create playlists, browse songs by genre or artist, and explore new music recommendations. The project aims to provide a robust and engaging music streaming experience similar to Spotify.<br><br>
+> 🧑‍💻 Built as a developer project to demonstrate frontend and backend skills using a known design blueprint (Spotify), mimicking key screens and features.
 
-Features :-<br><br>
+---
 
-User Authentication :<br>
-1. Sign up: Create a new account to access the SpotifyClone.<br>
-2. Sign in: Log in to your existing account to access the SpotifyClone.<br>
-3. Sign out: Log out of your account to end your session.<br><br>
+## 🔥 Key Features
 
-Contact Us :<br>
-Users can contact us through a contact form .<br><br>
+### 🎨 Frontend (React + Tailwind)
+- Responsive UI similar to Spotify
+- Pages:
+  - Home
+  - Search
+  - Your Library (mockup)
+  - Login / Signup (Firebase Auth)
+  - Playlist view (mockup)
+  - Track details 
+- Audio Player with:
+  - Play/Pause
+  - Seek
+  - Progress bar
+  - Volume control
 
-Future Scope :-<br>
-1. User-based Songs recommendations<br>
-2. Songs along with Podcasts<br>
-3. Users can make or delete their own Playlists<br>
-4. Users can download any song or podcasts<br>
-5. Auto-Search filling recommendations<br><br>
+### 🔐 Authentication
+- Firebase Authentication with:
+  - Email/password login
+  - Auth state management
+  - Protected routes
 
-Technologies Used :- <br>
-1. React.js
-2. Core CSS
-3. CSS Framework (Tailwind CSS)
-4. Node.js
-5. NPM Packages
-6. Firebase Auth (later shifting on Auth.js)
+### 🛠️ Backend (Node + Express)
+- REST API structure (extendable)
+- CORS configured
+- Can be connected to Firebase Firestore or MongoDB
+- Handles environment-based builds for production
+
+---
+
+## 🧰 Tech Stack
+
+| Frontend                | Backend                   | Auth / Storage         |
+|-------------------------|---------------------------|------------------------|
+| React.js                | Node.js + Express.js      | Firebase Auth          |
+| Tailwind CSS            | REST APIs (custom)        | Firebase Firestore     |
+| React Router DOM        | dotenv, cors, nodemon     |                        |
+| Icons                   |                           |                        |
+
+---
+
+## ⚙️ Getting Started
+
+### ✅ Prerequisites
+
+- Node.js (v18+)
+- Firebase Project with Authentication enabled
+- (Optional) Firebase Firestore or MongoDB
+
+---
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/nikhilhuh/SpotifyClone.git
+cd SpotifyClone
+```
+
+### 2. Install Dependencies
+
+# Backend
+```bash
+cd backend-side
+npm install
+```
+
+# Frontend
+```bash
+cd ../client-side
+npm install
+```
+
+### 3. Setup Environment Variables
+/client-side/.env
+
+```bash
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+
+### 4. Run the app
+
+# Backend
+```bash
+cd backend-side
+npm start
+```
+
+# Frontend
+```bash
+cd ../client-side
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
